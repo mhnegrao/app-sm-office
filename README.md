@@ -1,21 +1,38 @@
-# Sapper Example
+# create-svelte
 
-This directory is a brief example of a [Sapper](https://sapper.svelte.dev/) app that can be deployed with Vercel and zero configuration.
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
 
-## Deploy Your Own
+## Creating a project
 
-Deploy your own Sapper project with Vercel.
+If you're seeing this, you've probably already done this step. Congrats!
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/vercel/tree/main/examples/sapper)
+```bash
+# create a new project in the current directory
+npm init svelte@next
 
-_Live Example: https://sapper.now-examples.now.sh_
-
-### How We Created This Example
-
-To get started with Sapper deployed with Vercel, you can use [degit](https://github.com/Rich-Harris/degit) to initialize the project:
-
-```shell
-$ npx degit "sveltejs/sapper-template#webpack" my-sapper-app
+# create a new project in my-app
+npm init svelte@next my-app
 ```
 
-> The only change made is to change the build script in `package.json` to be `"sapper export"`.
+> Note: the `@next` is temporary
+
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
+
+```bash
+npm run build
+```
+
+> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
